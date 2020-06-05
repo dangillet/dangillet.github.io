@@ -7,22 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
         integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Oxygen:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 
     <title>Kinderarts Dr. Kathy Bouckaert, pediatre in Hofstade</title>
 </head>
 
-<body data-spy="scroll" data-target="#mainnavbar" data-offset="51">
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainnavbar">
         <a class="navbar-brand" href="#">
             <p class="mb-0">Dr. Kathy Bouckaert</p>
@@ -54,16 +49,42 @@
 
     <div class="container">
         <section class="top-section">
-            <div class="row pt-5">
-                <div class="col-12">
-                    <h1 class="text-info">Ligging</h1>
-                    <p>De praktijk is gelegen naast en achter het woonhuis. Loop rechts langs de garage naar achter.</p>
-                    <p>Foto Ingang</p>
-                    <p>Google Maps</p>
+            <h1 class="text-info pt-5 mb-3">Ligging</h1>
+            <div id="locations" class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="card border-info rounded-lg clickable my-3" data-location="praktijk">
+                        <h3 class="card-header text-info">Privé Praktijk</h3>
+                        <div class="card-body">
+                            <address class="card-text">
+                                Steppeke 61,<br>
+                                1981 Hofstade
+                            </address>
+                            <p class="card-text"><a href="tel:+32-15-613466" class="text-nowrap"><i
+                                        class="fas fa-phone pr-2"></i>015/61.34.66</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="card rounded-lg clickable my-3" data-location="imelda">
+                        <h3 class="card-header text-info">Imeldaziekenhhuis</h3>
+                        <div class="card-body">
+                            <address class="card-text">
+                                Imeldalaan 9,<br>
+                                2820 Bonheiden
+                            </address>
+                            <p class="card-text"><a href="tel:+32-15-505111" class="text-nowrap"><i
+                                        class="fas fa-phone pr-2"></i>015/50.51.11</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+    </div>
 
+    <div id="map"></div>
+
+    <div class="container">
         <section class="pt-5">
             <h1 class="text-info">Niet vergeten</h1>
             <div class="row my-3 p-4">
@@ -91,7 +112,7 @@
                 <div class="col-md-2"></div>
             </div>
 
-            <div class="row my-3 p-4">
+            <div class="row mt-3 p-4">
                 <div class="col-md-2"></div>
                 <div class="col-md-2 p-3 text-center align-self-center text-purple">
                     <img src="img/Payconiq_logo.svg" class="pr-2" />
@@ -105,69 +126,100 @@
 
         </section>
 
-        <section>
-            <div class="row pt-5">
-                <div class="col-12">
-                    <h1 class="text-info">Corona voorzorgen</h1>
-                    <p>BELANGRIJK: CORONA-COVID 19! Update 22/05/2020</p>
-                    Om de verspreiding van het Corona virus COVID19 tegen te gaan, zijn wij, kinderartsen,
-                    genoodzaakt
-                    om de volgende maatregelen te treffen:
-                    - Gelieve als ouder steeds een mondmasker te dragen. Dit geldt ook voor kinderen vanaf
-                    12 jaar.
-                    - We vragen u om op tijd te komen, en maximaal 15 minuten voor de afspraak.
-                    - Gelieve uw handen te ontsmetten bij aankomst en vertrek.
-                    - Slechts 1 gezonde ouder of begeleider wordt toegestaan, tenzij in uitzonderlijke gevallen.
-                    - Gelieve de regels van social distancing zoveel als mogelijk toe te passen.
-                    Dank voor uw begrip
-                    Pictogrammen zie https://www.huisartsenpraktijkbalans.be/
+        <section class="pt-5">
+            <h1 class="text-info">Corona voorzorgen</h1>
 
-                </div>
+            <div class="alert alert-danger my-3" role="alert">
+                <h2 class="d-flex justify-content-between">BELANGRIJK: CORONA-COVID 19! <span
+                        class="badge badge-danger"><i class="fas fa-star text-warning"></i> Update 22/05/2020</span>
+                </h2>
+                <p>Om de verspreiding van het Corona virus COVID19 tegen te gaan, zijn wij, kinderartsen,
+                    genoodzaakt om de volgende maatregelen te treffen:</p>
+                <ul>
+                    <li>Gelieve als ouder <u><b>steeds</b></u> een mondmasker te dragen. Dit geldt ook voor kinderen
+                        vanaf
+                        12 jaar.</li>
+                    <li>We vragen u om op tijd te komen, en maximaal 15 minuten voor de afspraak.</li>
+                    <li>Gelieve uw handen te ontsmetten bij aankomst en vertrek.</li>
+                    <li>Slechts 1 gezonde ouder of begeleider wordt toegestaan, tenzij in uitzonderlijke gevallen.</li>
+                    <li>Gelieve de regels van <u><b>social distancing</b></u> zoveel als mogelijk toe te passen.</li>
+                </ul>
+                <p>Dank voor uw begrip</p>
+                <picture>
+                    <source srcset="img/pictogrammen_corona.webp"  type="image/webp">
+                    <img src="img/pictogrammen_corona.jpg" alt="Corona pictogrammen" class="d-block mx-auto w-75" />
+                </picture>
             </div>
         </section>
+    </div>
 
-        <section>
-            <div class="row pt-5">
-                <div class="col-12">
-                    <h1 class="text-info">Voosrschriften en attesten</h1>
+    <div id="parallax_info"></div>
+
+    <div class="container">
+        <section class="row my-3">
+            <div class="col-12">
+                <h1 class="text-info mb-5">Voosrschriften en attesten</h1>
+            </div>
+            <div class="col-sm-2 align-self-center">
+                <p class="text-center text-purple"><i class="fas fa-file-signature fa-4x"></i></p>
+            </div>
+            <div class="col-sm-10">
+                <p>
                     Sinds enige tijd laat het RIZIV niet meer toe dat attesten en voorschriften vrij worden
                     verstrekt.
                     Daarom verzoek ik u om voldoende voorschriften te vragen tijdens uw raadpleging met de arts. Op
                     die manier kan een kwaliteitsvolle geneeskunde gegarandeerd worden.
                     Neemt uw kind chronische medicatie? Help de arts door vooraf te kijken wat u thuis nog
-                    voorradig hebt en stel een lijstje op met wat u nodig hebt.
-
-                </div>
+                    voorradig hebt en stel een lijstje op met wat u nodig hebt.</p>
             </div>
+
         </section>
 
-        <section>
-            <div class="row pt-5">
-                <div class="col-12">
-                    <h1 class="text-info">Resultaten</h1>
-                    Tussen 15u30 -17u (niet op woensdag en donderdag) kan u bellen op 015/61.34.66 voor een
+        <section class="row my-3">
+            <div class="col-12">
+                <h1 class="text-info mb-5">Resultaten</h1>
+            </div>
+            <div class="col-sm-2 align-self-center">
+                <p class="text-center text-success"><i class="fas fa-file-medical fa-4x"></i></p>
+            </div>
+            <div class="col-sm-10">
+                <p>
+                    Tussen 15u30 -17u (niet op woensdag en donderdag) kan u bellen op <a href="tel:+32-15-613466"
+                        class="text-nowrap"><i class="fas fa-phone pr-2"></i>015/61.34.66</a> voor een
                     korte bespreking van de resultaten van de bloedanalyses of andere onderzoeken. Voor een
-                    uitgebreide bespreking of opstarten van medicatie, maakt u best een afspraak.
-
-                </div>
+                    uitgebreide bespreking of opstarten van medicatie, maakt u best een afspraak.</p>
             </div>
+
         </section>
 
-        <section>
-            <div class="row pt-5">
-                <div class="col-12">
-                    <h1 class="text-info">Nuttige contacten</h1>
-                    Kinderafdeling in het Imeldaziekenhuis: 015/50.59.80
-                    Spoedgevallendienst Imeldaziekenhuis: 015/50.50.40
+        <section class="row my-3">
+            <div class="col-12">
+                <h1 class="text-info mb-5">Nuttige contacten</h1>
+            </div>
+            <div class="col-sm-2 align-self-center">
+                <p class="text-center text-warning"><i class="fas fa-hospital fa-4x"></i></p>
+            </div>
+            <div class="col-sm-10">
+                <ul class="list-group d-inline-block">
+                    <li class="list-group-item lead">Kinderafdeling in het Imeldaziekenhuis: <a href="tel:+32-15-505980"
+                            class="text-nowrap"><i class="fas fa-phone pr-2"></i>015/50.59.80</a></li>
+                    <li class="list-group-item lead">Spoedgevallendienst Imeldaziekenhuis: <a href="tel:+32-15-505040"
+                            class="text-nowrap"><i class="fas fa-phone pr-2"></i>015/50.50.40</a></li>
+                    <li class="list-group-item lead">Antigifcentrum: <a href="tel:+32-70-245245" class="text-nowrap"><i
+                                class="fas fa-phone pr-2"></i>070/ 24.52.45</a></li>
+                    <li class="list-group-item lead">Apotheek van wacht: <a
+                            href="https://www.apotheek.be">www.apotheek.be</a></li>
+                </ul>
+            </div>
+            <div class="col-12">
+                <p class="mt-3">
                     Voor alle informatie betreffende de dienst kindergeneeskunde en de
                     kinderartsen:
-                    www.imelda.be/zorgaanbod/moederenkind/kindergeneeskunde
-                    Antigifcentrum: 070/ 24.52.45
-                    Apotheek van wacht: www.apotheek.be
-
-                </div>
+                    <a href="https://www.imelda.be/zorgaanbod/medische-specialismen/kindergeneeskunde">
+                        www.imelda.be/zorgaanbod/medische-specialismen/kindergeneeskunde
+                    </a></p>
             </div>
-        </section>
+
     </div>
 
     <footer class="bg-dark">
@@ -235,19 +287,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <!--
-    <script>
-        let map;
-        function initMap() {
-          map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 50.994994, lng: 4.4930059},
-            zoom: 8
-          });
-        }
-      </script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC5qb4_2EaotSUpCpWyspjOrRQBezmG-0&callback=initMap"
-      async defer></script>
-      -->
+    <script src="js/lib.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC5qb4_2EaotSUpCpWyspjOrRQBezmG-0&callback=initMap"
+        async defer></script>
+    <script src="js/modernizr-custom.js"></script>
 </body>
 
 </html>
