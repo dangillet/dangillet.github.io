@@ -156,7 +156,7 @@ $headings-font-family: $font-family-sans-serif;
     }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     #parallax,
     #parallax_info {
         display: none;
