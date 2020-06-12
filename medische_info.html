@@ -8,10 +8,9 @@
 
     <meta name="Description" content="Medische informatie van Kinderarts pediatre dokter Kathy Bouckaert.">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="awesome.min.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Oxygen:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Oxygen:wght@300;400;700&family=Pangolin&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="main.min.css">
 
@@ -20,9 +19,9 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainnavbar">
-        <a class="navbar-brand" href="#">
-            <p class="mb-0">Dr. Kathy Bouckaert</p>
-            <p>Kinderarts</p>
+        <a class="navbar-brand" href="index.html">
+            <p class="mb-0 lead">Dr. Kathy Bouckaert<br>
+                Kinderarts</p>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +40,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="praktische_info.html">Praktische Info</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item  active">
                     <a class="nav-link" href="medische_info.html">Medische Info</a>
                 </li>
             </ul>
@@ -53,7 +52,9 @@
             <div class="row my-3 p-4">
                 <div class="col-12">
                     <h1 class="text-info pt-5 mb-4">Alarm signalen</h1>
-                    <h3 class="alert alert-info">Wanneer moet je de dag zelf de dokter raadplegen?</h3>
+                    <h3 class="alert alert-info"><span id="dokter_raadplegen"></span>Wanneer moet je de dag zelf de
+                        dokter
+                        raadplegen?</h3>
                     <ul class="fa-ul lead aerial">
                         <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Indien
                             uw kind jonger is dan 3 maanden en koorts maakt meer dan 38°C</li>
@@ -91,36 +92,56 @@
                     <h1 class="text-info mb-4">Wat te doen bij koorts?</h1>
                     <h3 class="alert alert-info">Definitie van koorts</h3>
                     <ul class="fa-ul lead aerial">
-                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Koorts bij kind jonger dan 3 maanden: vanaf 38°C</li>
-                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Koorts bij kind ouder dan 3 maanden: vanaf 38,5°C</li>
+                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Koorts bij kind
+                            jonger dan 3 maanden: vanaf 38°C</li>
+                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Koorts bij kind
+                            ouder dan 3 maanden: vanaf 38,5°C</li>
                     </ul>
                 </div>
                 <div class="col-12 my-3">
                     <h3 class="alert alert-info">Wat te doen bij koorts</h3>
                     <ul class="fa-ul lead aerial">
-                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> De kamertemperatuur verlagen zo mogelijk</li>
-                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Laat uw kind lichte kledij dragen</li>
-                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Geeft eventueel een koortswerend middel als er voldoende tijdsinterval is tussen 2
+                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> De kamertemperatuur
+                            verlagen zo mogelijk</li>
+                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Laat uw kind lichte
+                            kledij dragen</li>
+                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Geeft eventueel een
+                            koortswerend middel als er voldoende tijdsinterval is tussen 2
                             toedieningsmomenten</li>
                     </ul>
-                    
-                    
+
+
                 </div>
                 <div class="col-12">
-                    <h3 class="alert alert-info">Koortswerende medicatie</h3>
+                    <h3 class="alert alert-info anchor">Koortswerende medicatie</h3>
                     <ul class="fa-ul lead aerial">
-                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Paracetamol (Dafalgan, Perdolan, Mobistix)</li>
+                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Paracetamol
+                            (Dafalgan, Perdolan, Mobistix)</li>
                         <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="far fa-clock text-primary"></i></span> Maximum 4&times; / dag</li>
-                            <li><span class="fa-li"><i class="fas fa-arrows-alt-h text-success"></i></span> Minstens 4 a 6 uur tussen 2 toedieningen</li>
-                            <li><span class="fa-li"><i class="fas fa-exclamation-triangle text-danger"></i></span> Niet bij ernstige leveraandoeningen</li>
+                            <li><span class="fa-li"><i class="far fa-clock text-primary"></i></span> Maximum 4&times; /
+                                dag</li>
+                            <li><span class="fa-li"><i class="fas fa-arrows-alt-h text-success"></i></span> Minstens 4 a
+                                6 uur tussen 2 toedieningen</li>
+                            <li><span class="fa-li"><i class="fas fa-exclamation-triangle text-danger"></i></span> Niet
+                                bij ernstige leveraandoeningen</li>
                         </ul>
-                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Ibuprofen (Nurofen, Malafene, Perdophen)</li>
+                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Ibuprofen (Nurofen,
+                            Malafene, Perdophen)</li>
                         <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="far fa-clock text-primary"></i></span> Maximun 3&times / dag</li>
-                            <li><span class="fa-li"><i class="fas fa-arrows-alt-h text-success"></i></span> Mimstens 8 uur tussen 2 toedieningen</li>
-                            <li><span class="fa-li"><i class="fas fa-exclamation-triangle text-danger"></i></span> Niet bij kinderen jonger dan 3 maanden, ernstige nieraandoeningen, stollingsstoornissen, windpokken</li>
+                            <li><span class="fa-li"><i class="far fa-clock text-primary"></i></span> Maximun 3&times /
+                                dag</li>
+                            <li><span class="fa-li"><i class="fas fa-arrows-alt-h text-success"></i></span> Mimstens 8
+                                uur tussen 2 toedieningen</li>
+                            <li><span class="fa-li"><i class="fas fa-exclamation-triangle text-danger"></i></span> Niet
+                                bij kinderen jonger dan 3 maanden, ernstige nieraandoeningen, stollingsstoornissen,
+                                windpokken</li>
                         </ul>
+                        <li><span class="fa-li"><i class="far fa-dot-circle text-danger"></i></span> Informatie over
+                            vaccinatie, kinderallergie, luchtwegproblemen en brochures over onderzoeken:
+                            <a href="https://www.imelda.be/zorgaanbod/moederenkind/kindergeneeskunde">
+                                www.imelda.be/zorgaanbod/moederenkind/kindergeneeskunde</a>
+                        </li>
+
                     </ul>
                 </div>
 
@@ -141,21 +162,21 @@
     <footer class="bg-dark">
         <div class="container py-5">
             <div class="row text-light">
-                <div class="col-xl-3 col-md-6 mb-4">
+                <div class="col-lg-3 my-3">
                     <h2>Locatie</h2>
                     <address>
                         Steppeke 61,<br>
                         1981 Hofstade
                     </address>
                 </div>
-                <div class="col-xl-3 col-md-6 mb-4">
+                <div class="col-lg-3 my-3">
                     <h2>Telefoon</h2>
                     <p><a href="tel:+32-15-613466" class="text-nowrap text-light"><i
                                 class="fas fa-phone pr-2"></i>015/61.34.66</a></p>
                 </div>
-                <div class="col-xl-4 col-md-6 mb-4">
+                <div class="col-lg-6 my-3">
                     <h2>Bereikbaar</h2>
-                    <table class="table table-dark table-borderless table-sm">
+                    <table class="table table-borderless table-sm table-dark bg-transparent">
                         <tbody>
                             <tr>
                                 <th scope="row">Ma</th>
@@ -172,10 +193,9 @@
                                 <td>10:00 tot 12:00</td>
                                 <td></td>
                             </tr>
-                            <tr class="text-secondary">
+                            <tr>
                                 <th scope="row">Do</th>
-                                <td>-</td>
-                                <td></td>
+                                <td colspan="2">Bel Kinderafdeling Imelda Ziekenhuis*</td>
                             </tr>
                             <tr>
                                 <th scope="row">Vr</th>
@@ -184,23 +204,23 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-                <div class="col-xl-2 col-md-6 mb-4">
-                    <button type="button" class="btn btn-dark">Privacyverklaring</button>
+                    <p class="small">* Gelieve de telefonische contacten te beperken tot het strikt noodzakelijke</p>
                 </div>
             </div>
             <div class="row text-light">
-                <div class="col-12 text-center">
-                    <a href="mailto:dan.gillet737@gmail.com" class="text-light text-decoration-none"
-                        style="font-size: 0.8em;">Website Design by Flight Data Analytics srl</p>
+                <div class="col-lg-2 text-center">
+                    <a href="#" class="text-light text-decoration-none small">Privacyverklaring</button>
                 </div>
+                <div class="col-lg-4 text-center">
+                    <a href="mailto:dan.gillet737@gmail.com" class="text-light text-decoration-none small"
+                        >Website Design by Flight Data Analytics srl</a>
+                </div>
+                <div class="col-lg-6"></div>
             </div>
         </div>
     </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -209,7 +229,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="js/lib.js"></script>
+    <script src="js/anim.js"></script>
 </body>
 
 </html>

@@ -10,21 +10,24 @@
     baby's en kinderen in haar privé praktijk in Hofstade en in het Imeldaziekenhuis in Mechelen.">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="awesome.min.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Oxygen:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Oxygen:wght@300;400;700&family=Pangolin&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="main.min.css">
+
+    <script src="js/lib.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC5qb4_2EaotSUpCpWyspjOrRQBezmG-0&callback=initMap"
+        defer></script>
 
     <title>Kinderarts Dr. Kathy Bouckaert, pediatre in Hofstade</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainnavbar">
-        <a class="navbar-brand" href="#">
-            <p class="mb-0">Dr. Kathy Bouckaert</p>
-            <p>Kinderarts</p>
+        <a class="navbar-brand" href="index.html">
+            <p class="mb-0 lead">Dr. Kathy Bouckaert<br>
+                Kinderarts</p>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +36,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="index.html"><i class="fas fa-home"></i><span
                             class="sr-only">(current)</span></a>
                 </li>
@@ -50,7 +53,7 @@
         </div>
     </nav>
 
-    <header id="home" class="top-section">
+    <header id="home" class="top-section" style="color: white; background-color: #244c10;">
         <div class="container py-5 px-5">
             <div class="row">
                 <div class="col-lg-7 text-center">
@@ -79,7 +82,7 @@
         <div class="container">
             <div id="locations" class="row py-5">
                 <div class="col-lg-6">
-                    <div class="card border-info rounded-lg clickable my-3" data-location="praktijk">
+                    <div class="card card-active rounded-lg clickable my-3" data-location="praktijk">
                         <h3 class="card-header text-info">Privé Praktijk</h3>
                         <div class="card-body">
                             <address class="card-text">
@@ -100,8 +103,8 @@
                                 Imeldalaan 9,<br>
                                 2820 Bonheiden
                             </address>
-                            <p class="card-text"><a href="tel:+32-15-505111" class="text-nowrap"><i
-                                        class="fas fa-phone pr-2"></i>015/50.51.11</a></p>
+                            <p class="card-text"><a href="tel:+32-15-505011" class="text-nowrap"><i
+                                        class="fas fa-phone pr-2"></i>015/50.50.11</a></p>
                         </div>
                     </div>
                 </div>
@@ -111,22 +114,44 @@
 
     <div id="map" class="mb-5"></div>
 
+    <section>
+        <div class="container-fluid">
+            <div class="row my-5">
+                <div class="col-lg-4 my-3">
+                    <p class="text-center text-purple"><i class="fas fa-map-signs fa-4x"></i></p>
+                    <p class="text-center">Praktijk gelegen rechts en achter het woonhuis</p>
+                </div>
+                <div class="col-lg-4 my-3">
+                    <p class="text-center text-primary"><i class="fas fas fa-id-card fa-4x"></i></p>
+                    <p class="text-center">Breng altijd ISI+ kaart, kleefbriefje mutualiteit of kids-ID mee</p>
+                </div>
+                <div class="col-lg-4 my-3">
+                    <p class="text-center text-primary">
+                        <img src="img/Payconiq_logo.svg" /><br>
+                        <img src="img/BC_logo_HRZNTL_RGB.svg" width="150" />
+                    </p>
+                    <p class="text-center">Betaal bij voorkeur met Bancontact of Payconiq</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="bg-dark">
         <div class="container py-5">
             <div class="row text-light">
-                <div class="col-lg-3">
+                <div class="col-lg-3 my-3">
                     <h2>Locatie</h2>
                     <address>
                         Steppeke 61,<br>
                         1981 Hofstade
                     </address>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 my-3">
                     <h2>Telefoon</h2>
                     <p><a href="tel:+32-15-613466" class="text-nowrap text-light"><i
                                 class="fas fa-phone pr-2"></i>015/61.34.66</a></p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6 my-3">
                     <h2>Bereikbaar</h2>
                     <table class="table table-borderless table-sm table-dark bg-transparent">
                         <tbody>
@@ -145,10 +170,9 @@
                                 <td>10:00 tot 12:00</td>
                                 <td></td>
                             </tr>
-                            <tr class="text-secondary">
+                            <tr>
                                 <th scope="row">Do</th>
-                                <td>-</td>
-                                <td></td>
+                                <td colspan="2">Bel Kinderafdeling Imelda Ziekenhuis*</td>
                             </tr>
                             <tr>
                                 <th scope="row">Vr</th>
@@ -157,23 +181,23 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-                <div class="col-lg-2">
-                    <button type="button" class="btn btn-dark">Privacyverklaring</button>
+                    <p class="small">* Gelieve de telefonische contacten te beperken tot het strikt noodzakelijke</p>
                 </div>
             </div>
             <div class="row text-light">
-                <div class="col-12 text-center">
-                    <a href="mailto:dan.gillet737@gmail.com" class="text-light text-decoration-none"
-                        style="font-size: 0.8em;">Website Design by Flight Data Analytics srl</p>
+                <div class="col-lg-2 text-center">
+                    <a href="#" class="text-light text-decoration-none small">Privacyverklaring</button>
                 </div>
+                <div class="col-lg-4 text-center">
+                    <a href="mailto:dan.gillet737@gmail.com" class="text-light text-decoration-none small"
+                        >Website Design by Flight Data Analytics srl</a>
+                </div>
+                <div class="col-lg-6"></div>
             </div>
         </div>
     </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS, then Google Maps -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -182,11 +206,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-
     <script src="js/modernizr-custom.js"></script>
-    <script src="js/lib.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC5qb4_2EaotSUpCpWyspjOrRQBezmG-0&callback=initMap"
-        async defer></script>
 </body>
 
 </html>
