@@ -80,11 +80,14 @@ p {
     width: 100%;
 }
 
+.no-overflow {
+    overflow: hidden;
+}
+
 ul.aerial li {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     opacity: 0;
-    overflow: hidden;
 }
 
 // Animate the list items
