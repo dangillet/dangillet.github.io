@@ -23,9 +23,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="awesome.min.css">
     <link rel="stylesheet" href="main.min.css">
-    <link
+    <!-- Lazy loading of remaining fonts -->
+    <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Oxygen:wght@700&display=swap"
-        rel="stylesheet" crossorigin="anonymous">
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Oxygen:wght@700&display=swap">
+    </noscript>
 
     <script src="js/lib.min.js" defer async></script>
     <title>Kinderarts Dr. Kathy Bouckaert, pediatre in Hofstade</title>
