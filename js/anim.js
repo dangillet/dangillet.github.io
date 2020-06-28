@@ -27,7 +27,7 @@
 
     };
 
-    // Small optemization: let's cache those items
+    // Small optimization: let's cache those items
     const win = $(window);
     const allLis = $("ul.aerial li");
 
