@@ -1,5 +1,5 @@
-function initMap() {
-    docReady(function() {
+$(function() {
+    function initMap() {
         const praktijk = { lat: 50.994991, lng: 4.495187 };
         const imelda = { lat: 51.017376, lng: 4.560212 };
         const locations = { 'praktijk': praktijk, 'imelda': imelda };
@@ -20,27 +20,18 @@ function initMap() {
                 this === clicked ? $(this).addClass("card-active") : $(this).removeClass("card-active");
             });
         });
-    });
-}
-
-function docReady(fn) {
-    // see if DOM is already available
-    if (document.readyState === "complete" || document.readyState === "interactive") {
-        // call on next available tick
-        setTimeout(fn, 1);
-    } else {
-        document.addEventListener("DOMContentLoaded", fn);
     }
-}
 
-// Create the script tag, set the appropriate attributes
-var script = document.createElement('script');
-script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDC5qb4_2EaotSUpCpWyspjOrRQBezmG-0&callback=initMap';
-script.defer = true;
-script.async = true;
+    // Create the script tag, set the appropriate attributes
+    const script = document.createElement('script');
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDC5qb4_2EaotSUpCpWyspjOrRQBezmG-0&callback=initMap';
+    script.async = true;
 
-// Attach your callback function to the `window` object
-window.initMap = initMap;
+    // Attach your callback function to the `window` object
+    window.initMap = initMap;
 
-// Append the 'script' element to 'head'
-document.head.appendChild(script);
+    // Append the 'script' element to 'head'
+    document.head.appendChild(script);
+
+});
+
